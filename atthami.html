@@ -8,6 +8,35 @@
     <link rel="stylesheet" href="page-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .back-home-minimal {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(45deg, #FF8C42, #FF3C83);
+            color: #FFFFFF; 
+            border: none; 
+            border-radius: 8px;
+            padding: 12px 20px; 
+            font-size: 1rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3); 
+        }
+
+        .back-home-minimal:hover {
+            background: linear-gradient(45deg, #FF3C83, #FF8C42); 
+            transform: translateY(-3px); 
+            box-shadow: 0 4px 15px rgba(255, 60, 131, 0.4); 
+        }
+
+        .back-home-minimal:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3);
+        }
+    </style>
 </head>
 <body>
 
@@ -35,6 +64,7 @@
                     <p><strong>วันอัฏฐมีบูชา</strong> คือวันคล้ายวันที่ประกอบพิธีถวายพระเพลิงพระพุทธสรีระของพระสัมมาสัมพุทธเจ้า จัดขึ้นหลังเสด็จดับขันธปรินิพพาน 8 วัน ตรงกับวันแรม ๘ ค่ำ เดือน ๖ ถือเป็นวันที่พุทธศาสนิกชนจะร่วมกันแสดงความโศกเศร้าอาลัยและรำลึกถึงพระมหากรุณาธิคุณเป็นครั้งสุดท้าย</p>
                     <p>พิธีถวายพระเพลิงจัดขึ้น ณ มกุฏพันธนเจดีย์ เมืองกุสินารา แคว้นมัลละ โดยมีพระมหากัสสปะเป็นประธานในพิธี หลังจากพระเพลิงมอดลงแล้ว โทณพราหมณ์ได้เข้ามาไกล่เกลี่ยและจัดแบ่งพระบรมสารีริกธาตุให้แก่กษัตริย์และพราหมณ์ 8 เมือง เพื่อนำไปสักการบูชาต่อไป</p>
                 </div>
+
                 <aside class="sidebar">
                     <h3>หลักธรรมที่พึงระลึก</h3>
                     <div class="info-card">
@@ -47,6 +77,7 @@
                     </div>
                 </aside>
             </div>
+
             <div class="activities-section">
                 <h3>กิจกรรมที่พุทธศาสนิกชนพึงปฏิบัติ</h3>
                 <div class="activities-grid">
@@ -67,38 +98,12 @@
                     </div>
                 </div>
             </div>
-        <<span>◀️</span> กลับหน้าแรก
-</a>
-<style>
-  .back-home-minimal {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 
-    background: linear-gradient(45deg, #FF8C42, #FF3C83);
-    color: #FFFFFF; 
-    border: none; 
-    border-radius: 8px;
-    padding: 12px 20px; 
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3); 
-  }
-
-  .back-home-minimal:hover {
-    background: linear-gradient(45deg, #FF3C83, #FF8C42); 
-    border-color: none;
-    transform: translateY(-3px); 
-    box-shadow: 0 4px 15px rgba(255, 60, 131, 0.4); 
-  }
-
-  .back-home-minimal:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3);
-  }
-</style>
+            <!-- ✅ ปุ่มกลับหน้าแรก -->
+            <a href="index.html" class="back-home-minimal">
+                <span>◀️</span> กลับหน้าแรก
+            </a>
+        </section>
     </main>
 
     <footer>
