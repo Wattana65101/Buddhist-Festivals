@@ -1,109 +1,113 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>วันสารทไทย</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="page-style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>วันสารทไทย</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+      .back-home-minimal {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        /* ใช้ margin ด้านบนเพื่อแยกจากเนื้อหาหลัก */
+        margin-top: 30px; 
+        background: linear-gradient(45deg, #FF8C42, #FF3C83);
+        color: #FFFFFF; 
+        border: none; 
+        border-radius: 8px;
+        padding: 12px 20px; 
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3); 
+      }
+
+      .back-home-minimal:hover {
+        background: linear-gradient(45deg, #FF3C83, #FF8C42); 
+        border-color: none;
+        transform: translateY(-3px); 
+        box-shadow: 0 4px 15px rgba(255, 60, 131, 0.4); 
+      }
+
+      .back-home-minimal:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3);
+      }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1><i class="fas fa-seedling"></i> วันสารทไทย</h1>
-        <p>เทศกาลทำบุญอุทิศส่วนกุศลให้แก่บรรพบุรุษ</p>
-    </header>
+    <header>
+        <h1><i class="fas fa-seedling"></i> วันสารทไทย</h1>
+        <p>เทศกาลทำบุญอุทิศส่วนกุศลให้แก่บรรพบุรุษ</p>
+    </header>
 
-    <nav>
-        <a href="index.html"><i class="fas fa-home"></i> หน้าแรก</a>
-        <a href="visakha.html"><i class="fas fa-moon"></i> วันวิสาขบูชา</a>
-        <a href="magha.html"><i class="fas fa-users"></i> วันมาฆบูชา</a>
-        <a href="asalha.html"><i class="fas fa-dharmachakra"></i> วันอาสาฬหบูชา</a>
-        <a href="atthami.html"><i class="fas fa-fire"></i> วันอัฏฐมีบูชา</a>
-        <a href="khao_phansa.html"><i class="fas fa-candle-holder"></i> วันเข้าพรรษา</a>
-        <a href="ok_phansa.html"><i class="fas fa-flag"></i> วันออกพรรษา</a>
-    </nav>
+    <nav>
+        <a href="index.html"><i class="fas fa-home"></i> หน้าแรก</a>
+        <a href="visakha.html"><i class="fas fa-moon"></i> วันวิสาขบูชา</a>
+        <a href="magha.html"><i class="fas fa-users"></i> วันมาฆบูชา</a>
+        <a href="asalha.html"><i class="fas fa-dharmachakra"></i> วันอาสาฬหบูชา</a>
+        <a href="atthami.html"><i class="fas fa-fire"></i> วันอัฏฐมีบูชา</a>
+        <a href="khao_phansa.html"><i class="fas fa-candle-holder"></i> วันเข้าพรรษา</a>
+        <a href="ok_phansa.html"><i class="fas fa-flag"></i> วันออกพรรษา</a>
+    </nav>
 
-    <main>
-        <section class="content-section">
-            <div class="content-grid">
-                <div class="main-content">
-                    <h2>ประวัติและความสำคัญ</h2>
-                    <img src="sart_thai.jpg" alt="ภาพขนมกระยาสารท" class="content-image">
-                    <p><strong>วันสารทไทย</strong> เป็นประเพณีทำบุญกลางปีของไทยที่สืบทอดมาแต่โบราณ ตรงกับวันสิ้นเดือน ๑๐ หรือวันแรม ๑๕ ค่ำ เดือน ๑０ เป็นช่วงที่พืชพันธุ์ธัญญาหารกำลังออกผลผลิต จึงมีการนำผลผลิตแรกเก็บเกี่ยวมาปรุงเป็นข้าวทิพย์และข้าวมธุปายาสเพื่อถวายพระสงฆ์ และที่สำคัญคือการทำบุญเพื่ออุทิศส่วนกุศลให้แก่บรรพบุรุษผู้ล่วงลับไปแล้ว</p>
-                    <p>มีความเชื่อว่าในวันนี้ ประตูนรกจะเปิดให้ดวงวิญญาณของเปรตและสัมภเวสีออกมารับส่วนบุญจากญาติพี่น้องที่ยังมีชีวิตอยู่ได้ ดังนั้นการทำบุญในวันสารทจึงถือเป็นการแสดงความกตัญญูต่อบรรพชน</p>
-                </div>
-                <aside class="sidebar">
-                    <h3>ขนมประจำเทศกาล</h3>
-                    <div class="info-card">
-                        <h4>กระยาสารท</h4>
-                        <p>เป็นขนมหลักของวันสารท ทำจากข้าวตอก ข้าวพอง ถั่ว งา และน้ำอ้อยเคี่ยว เป็นสัญลักษณ์ของความอุดมสมบูรณ์</p>
-                    </div>
-                     <div class="info-card">
-                        <h4>ข้าวมธุปายาส</h4>
-                        <p>ข้าวที่หุงด้วยน้ำนมและน้ำผึ้ง มีประวัติมาจากที่นางสุชาดาถวายแด่พระพุทธเจ้าก่อนตรัสรู้</p>
-                    </div>
-                </aside>
-            </div>
-            <div class="activities-section">
-                <h3>กิจกรรมและประเพณี</h3>
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="icon"><i class="fas fa-utensils"></i></div>
-                        <h4>กวนกระยาสารท</h4>
-                        <p>ญาติพี่น้องและคนในชุมชนจะมารวมตัวกันช่วยกันกวนขนมกระยาสารทเพื่อนำไปทำบุญ</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
-                        <h4>ทำบุญตักบาตร</h4>
-                        <p>นำข้าวปลาอาหารและขนมกระยาสารทไปทำบุญตักบาตรที่วัดในตอนเช้า</p>
-                    </div>
-                    <div class="activity-card">
-                        <div class="icon"><i class="fas fa-ghost"></i></div>
-                        <h4>ชิงเปรต</h4>
-                        <p>เป็นประเพณีของทางภาคใต้ ที่จะตั้งร้านเปรตเพื่ออุทิศของกินของใช้ให้เปรต แล้วให้ผู้คนไปแย่งชิงของเหล่านั้น</p>
-                    </div>
-                </div>
-            </div>
-        <span>◀️</span> กลับหน้าแรก
-</a>
-<style>
-  .back-home-minimal {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    <main>
+        <section class="content-section">
+            <div class="content-grid">
+                <div class="main-content">
+                    <h2>ประวัติและความสำคัญ</h2>
+                    <img src="sart_thai.jpg" alt="ภาพขนมกระยาสารท" class="content-image">
+                    <p><strong>วันสารทไทย</strong> เป็นประเพณีทำบุญกลางปีของไทยที่สืบทอดมาแต่โบราณ ตรงกับวันสิ้นเดือน ๑๐ หรือวันแรม ๑๕ ค่ำ เดือน ๑０ เป็นช่วงที่พืชพันธุ์ธัญญาหารกำลังออกผลผลิต จึงมีการนำผลผลิตแรกเก็บเกี่ยวมาปรุงเป็นข้าวทิพย์และข้าวมธุปายาสเพื่อถวายพระสงฆ์ และที่สำคัญคือการทำบุญเพื่ออุทิศส่วนกุศลให้แก่บรรพบุรุษผู้ล่วงลับไปแล้ว</p>
+                    <p>มีความเชื่อว่าในวันนี้ ประตูนรกจะเปิดให้ดวงวิญญาณของเปรตและสัมภเวสีออกมารับส่วนบุญจากญาติพี่น้องที่ยังมีชีวิตอยู่ได้ ดังนั้นการทำบุญในวันสารทจึงถือเป็นการแสดงความกตัญญูต่อบรรพชน</p>
+                </div>
+                <aside class="sidebar">
+                    <h3>ขนมประจำเทศกาล</h3>
+                    <div class="info-card">
+                        <h4>กระยาสารท</h4>
+                        <p>เป็นขนมหลักของวันสารท ทำจากข้าวตอก ข้าวพอง ถั่ว งา และน้ำอ้อยเคี่ยว เป็นสัญลักษณ์ของความอุดมสมบูรณ์</p>
+                    </div>
+                     <div class="info-card">
+                        <h4>ข้าวมธุปายาส</h4>
+                        <p>ข้าวที่หุงด้วยน้ำนมและน้ำผึ้ง มีประวัติมาจากที่นางสุชาดาถวายแด่พระพุทธเจ้าก่อนตรัสรู้</p>
+                    </div>
+                </aside>
+            </div>
+            <div class="activities-section">
+                <h3>กิจกรรมและประเพณี</h3>
+                <div class="activities-grid">
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-utensils"></i></div>
+                        <h4>กวนกระยาสารท</h4>
+                        <p>ญาติพี่น้องและคนในชุมชนจะมารวมตัวกันช่วยกันกวนขนมกระยาสารทเพื่อนำไปทำบุญ</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-hand-holding-heart"></i></div>
+                        <h4>ทำบุญตักบาตร</h4>
+                        <p>นำข้าวปลาอาหารและขนมกระยาสารทไปทำบุญตักบาตรที่วัดในตอนเช้า</p>
+                    </div>
+                    <div class="activity-card">
+                        <div class="icon"><i class="fas fa-ghost"></i></div>
+                        <h4>ชิงเปรต</h4>
+                        <p>เป็นประเพณีของทางภาคใต้ ที่จะตั้งร้านเปรตเพื่ออุทิศของกินของใช้ให้เปรต แล้วให้ผู้คนไปแย่งชิงของเหล่านั้น</p>
+                    </div>
+                </div>
+            </div>
+            
+                        <a href="index.html" class="back-home-minimal">
+                <span>◀️</span> กลับหน้าแรก
+            </a>
+                </main>
 
-    background: linear-gradient(45deg, #FF8C42, #FF3C83);
-    color: #FFFFFF; 
-    border: none; 
-    border-radius: 8px;
-    padding: 12px 20px; 
-    font-size: 1rem;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.25s ease;
-    box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3); 
-  }
-
-  .back-home-minimal:hover {
-    background: linear-gradient(45deg, #FF3C83, #FF8C42); 
-    border-color: none;
-    transform: translateY(-3px); 
-    box-shadow: 0 4px 15px rgba(255, 60, 131, 0.4); 
-  }
-
-  .back-home-minimal:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(255, 60, 131, 0.3);
-  }
-</style>
-    </main>
-
-    <footer>
-        <p><i class="far fa-copyright"></i> 2568 | จัดทำโดย นาย วัฒนา มานะงาม | รายวิชาการเตรียมความพร้อมฯ</p>
-    </footer>
-    
+    <footer>
+        <p><i class="far fa-copyright"></i> 2568 | จัดทำโดย นาย วัฒนา มานะงาม | รายวิชาการเตรียมความพร้อมฯ</p>
+    </footer>
+    
 </body>
 </html>
