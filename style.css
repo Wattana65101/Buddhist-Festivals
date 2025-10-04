@@ -1,0 +1,299 @@
+/* --- การตั้งค่าตัวแปรและสไตล์พื้นฐาน --- */
+:root {
+    --primary-color: #FF7A00; /* สีส้มสดใส (สีหลัก) */
+    --secondary-color: #FFA500; /* สีส้ม-เหลือง (สีรอง) */
+    --text-color: #333333; /* สีตัวอักษรเข้ม */
+    --light-bg-color: #FFF8F0; /* สีพื้นหลังอ่อนๆ */
+    --white-color: #FFFFFF;
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    line-height: 1.7;
+    background-color: var(--light-bg-color);
+    color: var(--text-color);
+}
+
+/* --- ส่วน Header --- */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color);
+    text-align: center;
+    padding: 2.5rem 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- แถบเมนู (Navigation) --- */
+nav {
+    background-color: var(--white-color);
+    padding: 1rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* เพิ่มระยะห่างระหว่างไอคอนกับข้อความใน Nav */
+nav a i {
+    margin-right: 8px;
+}
+
+
+/* ลูกเล่น: ขีดเส้นใต้เมื่อเอาเมาส์ไปชี้ */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--secondary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+}
+
+nav a:hover::after, nav a.active::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* --- ส่วนเนื้อหาหลัก (Main) --- */
+main {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background-color: var(--white-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    /* ลูกเล่น: Animation ตอนโหลดหน้า */
+    animation: fadeIn 1s ease-out;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    /* --- เพิ่มเข้ามาใหม่: จัดไอคอนให้อยู่กึ่งกลางกับหัวข้อ --- */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* --- ส่วนของวิดีโอ --- */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- ส่วนของการ์ดเมนูวันสำคัญ --- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--light-bg-color);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    /* ลูกเล่น: การ์ดขยับขึ้นเมื่อเอาเมาส์ไปชี้ */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUpFadeIn 1s ease-out forwards;
+    opacity: 0;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ทำให้การ์ดแต่ละใบมี Animation delay ไม่เท่ากัน */
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.card p {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* --- ปุ่มกด --- */
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+/* --- เพิ่มเข้ามาใหม่: ลูกเล่นสำหรับไอคอนในปุ่ม --- */
+.button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.button:hover i {
+    transform: translateX(5px);
+}
+
+
+/* --- ส่วน Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+/* --- เพิ่มเข้ามาใหม่: จัดระยะไอคอนใน Footer --- */
+footer i {
+    margin-right: 5px;
+}
+
+
+/* --- Keyframe Animations สำหรับลูกเล่น --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- การปรับแก้สำหรับจอมือถือ (Responsive) --- */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav {
+        padding: 0.5rem;
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* --- สไตล์สำหรับปฏิทินที่เพิ่มเข้ามาใหม่ --- */
+.calendar-section {
+    background-color: var(--light-bg-color);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.calendar-item {
+    background-color: var(--white-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--primary-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calendar-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.calendar-date {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.1;
+}
+
+.calendar-month {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.calendar-item h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.25rem;
+}
+
+.calendar-item p {
+    font-size: 0.95rem;
+    color: #666;
+}
