@@ -1,62 +1,4 @@
 /* --- การตั้งค่าตัวแปรและสไตล์พื้นฐาน --- */
-/* ===== สไตล์สำหรับ Header ที่จะใส่รูปภาพพื้นหลัง ===== */
-.hero-image {
-    /* ใส่ URL ของรูปภาพที่คุณต้องการตรงนี้ */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('YOUR_IMAGE_URL_HERE.jpg'); 
-    height: 40vh; /* สามารถปรับความสูงได้ตามต้องการ */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-
-.hero-text {
-    background-color: rgba(23, 56, 122, 0.8); /* สีน้ำเงินเข้มโปร่งแสง คล้ายในรูปตัวอย่าง */
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-.hero-text h1 {
-    font-size: 2.5em; /* ปรับขนาดตัวอักษรได้ */
-    margin-bottom: 10px;
-}
-
-.hero-text p {
-    font-size: 1.2em; /* ปรับขนาดตัวอักษรได้ */
-}
-
-
-/* ===== สไตล์สำหรับ Section ประวัติที่เพิ่มเข้ามาใหม่ ===== */
-.history-section {
-    background-color: #ffffff; /* พื้นหลังสีขาว */
-    padding: 30px 20px;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
-}
-
-.history-section h2 {
-    text-align: center;
-    color: #4a4a4a;
-    margin-bottom: 20px;
-}
-
-.history-section p {
-    line-height: 1.8; /* ปรับระยะห่างระหว่างบรรทัดให้อ่านง่าย */
-    margin-bottom: 15px;
-    text-indent: 2em; /* ย่อหน้าแรกของแต่ละพารากราฟ */
-}
-
-.history-section strong {
-    color: #d9534f; /* ทำให้ตัวหนังสือหนาเด่นขึ้น */
-}
 :root {
     --primary-color: #FF7A00; /* สีส้มสดใส (สีหลัก) */
     --secondary-color: #FFA500; /* สีส้ม-เหลือง (สีรอง) */
@@ -79,23 +21,49 @@ body {
     color: var(--text-color);
 }
 
-/* --- ส่วน Header --- */
-header {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white-color);
+/* --- ส่วน Header (Hero Image) ที่ปรับปรุงใหม่ --- */
+.hero-image {
+    /* **สำคัญ:** ใส่ URL รูปภาพของคุณตรงนี้ */
+    /* เพิ่มการไล่ระดับสีโทนส้มโปร่งแสง และเพิ่ม background-attachment: fixed; เพื่อสร้าง Parallax Effect */
+    background-image: linear-gradient(rgba(255, 122, 0, 0.5), rgba(255, 165, 0, 0.5)), url('header.jpg'); 
+    height: 55vh; /* เพิ่มความสูงเพื่อให้เห็นเอฟเฟกต์ชัดขึ้น */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* <<<< นี่คือส่วนสำคัญที่ทำให้พื้นหลังขยับได้ (Parallax) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 2.5rem 1rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: white;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.hero-text {
+    background-color: rgba(0, 0, 0, 0.4); /* ทำให้พื้นหลังข้อความเข้มขึ้นเล็กน้อยเพื่อให้อ่านง่าย */
+    padding: 25px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    /* เพิ่ม Animation ให้ข้อความ */
+    animation: fadeInDown 1.5s ease-out;
 }
 
-/* --- แถบเมนู (Navigation) --- */
+.hero-text h1 {
+    font-size: 3em; /* ปรับขนาดตัวอักษรให้เด่นขึ้น */
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* เพิ่มเงาให้ตัวอักษร */
+}
+
+.hero-text p {
+    font-size: 1.3em; 
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+
+/* --- แถบเมนู (Navigation Bar) ที่ปรับปรุงใหม่ --- */
 nav {
-    background-color: var(--white-color);
+    /* ทำให้พื้นหลังโปร่งแสงเล็กน้อย และใช้ backdrop-filter เพื่อสร้างเอฟเฟกต์กระจกฝ้า (Frosted Glass) */
+    background-color: rgba(255, 255, 255, 0.85); 
+    backdrop-filter: blur(8px);
     padding: 1rem;
     text-align: center;
     box-shadow: var(--shadow);
@@ -114,13 +82,10 @@ nav a {
     transition: color 0.3s ease;
 }
 
-/* เพิ่มระยะห่างระหว่างไอคอนกับข้อความใน Nav */
 nav a i {
     margin-right: 8px;
 }
 
-
-/* ลูกเล่น: ขีดเส้นใต้เมื่อเอาเมาส์ไปชี้ */
 nav a::after {
     content: '';
     position: absolute;
@@ -154,7 +119,6 @@ section {
     background-color: var(--white-color);
     border-radius: 12px;
     box-shadow: var(--shadow);
-    /* ลูกเล่น: Animation ตอนโหลดหน้า */
     animation: fadeIn 1s ease-out;
 }
 
@@ -163,20 +127,60 @@ section h2 {
     font-size: 2rem;
     color: var(--primary-color);
     margin-bottom: 1.5rem;
-    /* --- เพิ่มเข้ามาใหม่: จัดไอคอนให้อยู่กึ่งกลางกับหัวข้อ --- */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
 }
 
+.Credit-section {
+    text-align: left;
+}
+
+.Credit-section h2 {
+    color: #4a4a4a; 
+}
+
+.Credit-section p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-indent: 2em;
+}
+
+.Credit-section strong {
+    color: var(--primary-color); /* เปลี่ยนสีให้เข้ากับธีม */
+}
+
+.history-section {
+    text-align: left;
+}
+
+.history-section h2 {
+    color: #4a4a4a; 
+}
+
+.history-section p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+    text-indent: 2em;
+}
+
+.history-section strong {
+    color: var(--primary-color); /* เปลี่ยนสีให้เข้ากับธีม */
+}
+
 /* --- ส่วนของวิดีโอ --- */
+.video-section h2 i {
+    color: #c4302b; /* ทำให้ไอคอนเป็นสีแดงคล้าย YouTube */
+}
+
 .video-container {
     position: relative;
     width: 100%;
     padding-top: 56.25%; /* 16:9 Aspect Ratio */
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: var(--shadow);
 }
 
 .video-container iframe {
@@ -187,126 +191,7 @@ section h2 {
     height: 100%;
 }
 
-/* --- ส่วนของการ์ดเมนูวันสำคัญ --- */
-.card-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.card {
-    background-color: var(--light-bg-color);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    overflow: hidden;
-    width: 320px;
-    text-align: center;
-    /* ลูกเล่น: การ์ดขยับขึ้นเมื่อเอาเมาส์ไปชี้ */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUpFadeIn 1s ease-out forwards;
-    opacity: 0;
-}
-
-.card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* ทำให้การ์ดแต่ละใบมี Animation delay ไม่เท่ากัน */
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.4s; }
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card h3 {
-    color: var(--primary-color);
-    margin: 1rem 0;
-}
-
-.card p {
-    padding: 0 1rem;
-    margin-bottom: 1.5rem;
-    font-size: 0.95rem;
-}
-
-/* --- ปุ่มกด --- */
-.button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--white-color);
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.button:hover {
-    background-color: var(--secondary-color);
-    transform: scale(1.05);
-}
-
-/* --- เพิ่มเข้ามาใหม่: ลูกเล่นสำหรับไอคอนในปุ่ม --- */
-.button i {
-    margin-left: 8px;
-    transition: transform 0.3s ease;
-}
-
-.button:hover i {
-    transform: translateX(5px);
-}
-
-
-/* --- ส่วน Footer --- */
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    background-color: #333;
-    color: #f4f4f4;
-}
-
-/* --- เพิ่มเข้ามาใหม่: จัดระยะไอคอนใน Footer --- */
-footer i {
-    margin-right: 5px;
-}
-
-
-/* --- Keyframe Animations สำหรับลูกเล่น --- */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes slideUpFadeIn {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* --- การปรับแก้สำหรับจอมือถือ (Responsive) --- */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-    nav {
-        padding: 0.5rem;
-    }
-    nav a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-    .card {
-        width: 100%;
-        max-width: 350px;
-    }
-}
-
-/* --- สไตล์สำหรับปฏิทินที่เพิ่มเข้ามาใหม่ --- */
+/* --- ส่วนปฏิทิน --- */
 .calendar-section {
     background-color: var(--light-bg-color);
 }
@@ -354,5 +239,132 @@ footer i {
 .calendar-item p {
     font-size: 0.95rem;
     color: #666;
+}
 
+/* --- ส่วนของการ์ดเมนูวันสำคัญ --- */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--white-color); /* เปลี่ยนพื้นหลังเป็นสีขาว */
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUpFadeIn 1s ease-out forwards;
+    opacity: 0;
+    border: 1px solid #eee; /* เพิ่มเส้นขอบบางๆ */
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.4s; }
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.card p {
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    min-height: 45px; /* กำหนดความสูงขั้นต่ำให้ p เพื่อให้ปุ่มอยู่ระดับเดียวกัน */
+}
+
+/* --- ปุ่มกด --- */
+.button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.button i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.button:hover i {
+    transform: translateX(5px);
+}
+
+/* --- ส่วน Footer --- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+footer i {
+    margin-right: 5px;
+}
+
+/* --- Keyframe Animations --- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUpFadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- การปรับแก้สำหรับจอมือถือ (Responsive) --- */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-image {
+        /* ปิดการใช้งาน Parallax บนมือถือ เพราะอาจทำให้กระตุก */
+        background-attachment: scroll; 
+    }
+
+    nav {
+        padding: 0.5rem;
+        backdrop-filter: none; /* ปิด effect บนมือถือเพื่อ performance */
+    }
+    nav a {
+        display: block;
+        margin: 0.5rem 0;
+        padding: 0.5rem;
+    }
+    .card {
+        width: 100%;
+        max-width: 350px;
+    }
 }
