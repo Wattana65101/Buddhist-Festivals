@@ -1,4 +1,62 @@
 /* --- การตั้งค่าตัวแปรและสไตล์พื้นฐาน --- */
+/* ===== สไตล์สำหรับ Header ที่จะใส่รูปภาพพื้นหลัง ===== */
+.hero-image {
+    /* ใส่ URL ของรูปภาพที่คุณต้องการตรงนี้ */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('YOUR_IMAGE_URL_HERE.jpg'); 
+    height: 40vh; /* สามารถปรับความสูงได้ตามต้องการ */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text {
+    background-color: rgba(23, 56, 122, 0.8); /* สีน้ำเงินเข้มโปร่งแสง คล้ายในรูปตัวอย่าง */
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.hero-text h1 {
+    font-size: 2.5em; /* ปรับขนาดตัวอักษรได้ */
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em; /* ปรับขนาดตัวอักษรได้ */
+}
+
+
+/* ===== สไตล์สำหรับ Section ประวัติที่เพิ่มเข้ามาใหม่ ===== */
+.history-section {
+    background-color: #ffffff; /* พื้นหลังสีขาว */
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.history-section h2 {
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.history-section p {
+    line-height: 1.8; /* ปรับระยะห่างระหว่างบรรทัดให้อ่านง่าย */
+    margin-bottom: 15px;
+    text-indent: 2em; /* ย่อหน้าแรกของแต่ละพารากราฟ */
+}
+
+.history-section strong {
+    color: #d9534f; /* ทำให้ตัวหนังสือหนาเด่นขึ้น */
+}
 :root {
     --primary-color: #FF7A00; /* สีส้มสดใส (สีหลัก) */
     --secondary-color: #FFA500; /* สีส้ม-เหลือง (สีรอง) */
@@ -296,4 +354,5 @@ footer i {
 .calendar-item p {
     font-size: 0.95rem;
     color: #666;
+
 }
